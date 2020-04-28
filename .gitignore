@@ -1,0 +1,6 @@
+.vscode/
+*.egg-info
+__pycache__
+dist/
+*.pyc
+ll_env/
