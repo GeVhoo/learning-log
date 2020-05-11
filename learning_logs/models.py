@@ -14,7 +14,7 @@ class Topic(models.Model):
 
 
 class Entry(models.Model):
-    # p.404
+    # Информация, изученная пользователем по теме
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     text = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
@@ -23,7 +23,7 @@ class Entry(models.Model):
         verbose_name_plural = 'entries'
 
     def __str__(self):
-        # p.404
+        # Возвращает строковое представление модели
         if len(self.text) > 50:
             return f'{self.text[:50]}...'
         return self.text
